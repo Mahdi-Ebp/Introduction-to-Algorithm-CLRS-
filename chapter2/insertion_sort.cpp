@@ -1,10 +1,10 @@
 #include<iostream>
 using namespace std;
 
-void sort(int a[]){
+void sort(int a[], int n){
 	int t = 0;
-	for(int i = 1; i < a.length(); a++)
-		for(int j = i - 1; j > 0 && a[j + 1] < a[j]; j--){
+	for(int i = 1; i < n; i++)
+		for(int j = i - 1; j >= 0 && a[j + 1] < a[j]; j--){
 			t = a[j + 1];
 			a[j + 1] = a[j];
 			a[j] = t;
@@ -13,6 +13,7 @@ void sort(int a[]){
 
 int main(){
 	cout << "Please enter the number of items in array:" << endl;
+	int n;
 	cin >> n;
 
 	int a[n];
@@ -20,7 +21,7 @@ int main(){
 	for(int i = 0; i < n; i++)
 		cin >> a[i];
 
-	sort(a);
+	sort(a, n);
 	
 	cout << "Sorted array:" << endl;
 	for(int i = 0; i < n; i++)
