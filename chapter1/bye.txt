@@ -1,0 +1,1 @@
+the previous file was written in mint. im just testing to see if i succeeded in using git on windows too.
